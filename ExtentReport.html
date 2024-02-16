@@ -1,0 +1,2890 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link href='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>ExtentReports</title>
+
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
+</head>
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo black"><img src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'>ExtentReports</span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>Feb 16, 2024 05:14:57 PM</span>
+			</a>
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m12 l12 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Tests</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>30</span> test(s) passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>Tc13-Validating Bottom Links</span>
+						<span class='test-time'>Feb 16, 2024 05:15:04 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 16, 2024 05:15:04 PM</span>
+	<span class='label end-time'>Feb 16, 2024 05:16:30 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 26s+178ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:15:12 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:15:19 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:16:30 PM</td>
+				<td class='step-details'>
+						Bottom Links Validated
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216051516.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216051516.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216051516.png'></li>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216051526.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216051526.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216051526.png'></li>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216051533.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216051533.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216051533.png'></li>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216051540.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216051540.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216051540.png'></li>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216051547.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216051547.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216051547.png'></li>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216051555.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216051555.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216051555.png'></li>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216051603.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216051603.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216051603.png'></li>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216051612.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216051612.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216051612.png'></li>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216051618.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216051618.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216051618.png'></li>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216051627.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216051627.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216051627.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>Tc11-Checkout & Payment Process</span>
+						<span class='test-time'>Feb 16, 2024 05:16:40 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 16, 2024 05:16:40 PM</span>
+	<span class='label end-time'>Feb 16, 2024 05:17:44 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 3s+988ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:16:48 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:16:48 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:16:49 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:16:57 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:17:19 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:17:25 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:17:37 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:17:38 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:17:38 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:17:40 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:17:40 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:17:41 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:17:42 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:17:43 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:17:44 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:17:44 PM</td>
+				<td class='step-details'>
+						PaymentIcon is clicked not able to automate it
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ByBrandName20240216051719.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ByBrandName20240216051719.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ByBrandName20240216051719.png'></li>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/Address Details20240216051744.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/Address Details20240216051744.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/Address Details20240216051744.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>Tc01-Sign-in with valid Credentials</span>
+						<span class='test-time'>Feb 16, 2024 05:17:51 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 16, 2024 05:17:51 PM</span>
+	<span class='label end-time'>Feb 16, 2024 05:18:04 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 13s+272ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:17:58 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:17:59 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:18:02 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:18:03 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:18:03 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:18:03 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:18:04 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:18:04 PM</td>
+				<td class='step-details'>
+						Login Succesfull
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ValidSignin20240216051804.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ValidSignin20240216051804.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ValidSignin20240216051804.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>Tc02-Sign-in with Invalid password & valid password</span>
+						<span class='test-time'>Feb 16, 2024 05:18:13 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 16, 2024 05:18:13 PM</span>
+	<span class='label end-time'>Feb 16, 2024 05:18:29 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 15s+816ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:18:22 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:18:23 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:18:28 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:18:28 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:18:28 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:18:29 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:18:29 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:18:29 PM</td>
+				<td class='step-details'>
+						Login Un-Succesfull
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ValidSignin20240216051829.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ValidSignin20240216051829.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ValidSignin20240216051829.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>Tc03-Sign-in with valid password & invalid password</span>
+						<span class='test-time'>Feb 16, 2024 05:18:36 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 16, 2024 05:18:36 PM</span>
+	<span class='label end-time'>Feb 16, 2024 05:18:51 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 14s+782ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:18:44 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:18:45 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:18:50 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:18:50 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:18:50 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:18:50 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:18:50 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:18:51 PM</td>
+				<td class='step-details'>
+						Login Un-Succesfull
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ValidSignin20240216051851.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ValidSignin20240216051851.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ValidSignin20240216051851.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>Tc04-Sign-in with invalid password & invalid password</span>
+						<span class='test-time'>Feb 16, 2024 05:18:58 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 16, 2024 05:18:58 PM</span>
+	<span class='label end-time'>Feb 16, 2024 05:19:09 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 10s+891ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:19:03 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:19:04 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:19:08 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:19:08 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:19:08 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:19:08 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:19:08 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:19:09 PM</td>
+				<td class='step-details'>
+						Login Un-Succesfull
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ValidSignin20240216051909.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ValidSignin20240216051909.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ValidSignin20240216051909.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>Tc07-Adding Cart through search Icon</span>
+						<span class='test-time'>Feb 16, 2024 05:19:16 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 16, 2024 05:19:16 PM</span>
+	<span class='label end-time'>Feb 16, 2024 05:19:46 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 29s+455ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:19:25 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:19:25 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:19:29 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:19:33 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:19:45 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:19:46 PM</td>
+				<td class='step-details'>
+						Added to cart
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/Search&AddtoCart20240216051946.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/Search&AddtoCart20240216051946.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/Search&AddtoCart20240216051946.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='8'>
+					<div class='test-heading'>
+						<span class='test-name'>Tc08-Adding Cart through Department</span>
+						<span class='test-time'>Feb 16, 2024 05:19:53 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 16, 2024 05:19:53 PM</span>
+	<span class='label end-time'>Feb 16, 2024 05:20:22 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 29s+22ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:20:01 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:20:01 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:20:10 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:20:22 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:20:22 PM</td>
+				<td class='step-details'>
+						Added to cart
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ByDepartment20240216052022.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ByDepartment20240216052022.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ByDepartment20240216052022.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='9'>
+					<div class='test-heading'>
+						<span class='test-name'>Tc09-Adding Cart through Department</span>
+						<span class='test-time'>Feb 16, 2024 05:20:29 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 16, 2024 05:20:29 PM</span>
+	<span class='label end-time'>Feb 16, 2024 05:20:37 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 8s+305ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:20:37 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='10'>
+					<div class='test-heading'>
+						<span class='test-name'>Tc15- Url Validation</span>
+						<span class='test-time'>Feb 16, 2024 05:21:25 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 16, 2024 05:21:25 PM</span>
+	<span class='label end-time'>Feb 16, 2024 05:21:35 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 9s+831ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:21:35 PM</td>
+				<td class='step-details'>
+						Validation Succesfull
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='11'>
+					<div class='test-heading'>
+						<span class='test-name'>Tc11--Adding Cart through Brand</span>
+						<span class='test-time'>Feb 16, 2024 05:21:41 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 16, 2024 05:21:41 PM</span>
+	<span class='label end-time'>Feb 16, 2024 05:22:14 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 33s+77ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:21:49 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:21:50 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:21:50 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:21:58 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:22:02 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:22:04 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:22:13 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:22:14 PM</td>
+				<td class='step-details'>
+						Added to cart
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ByBrandName20240216052214.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ByBrandName20240216052214.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ByBrandName20240216052214.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='12'>
+					<div class='test-heading'>
+						<span class='test-name'>Tc10--Adding Cart through Brand</span>
+						<span class='test-time'>Feb 16, 2024 05:22:22 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 16, 2024 05:22:22 PM</span>
+	<span class='label end-time'>Feb 16, 2024 05:23:03 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 40s+898ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:22:31 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:22:31 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:22:31 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:22:43 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:22:43 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:23:01 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:23:03 PM</td>
+				<td class='step-details'>
+						Added to cart
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ByBrandName20240216052302.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ByBrandName20240216052302.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ByBrandName20240216052302.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='13'>
+					<div class='test-heading'>
+						<span class='test-name'>Tc14-Menu validation</span>
+						<span class='test-time'>Feb 16, 2024 05:23:10 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 16, 2024 05:23:10 PM</span>
+	<span class='label end-time'>Feb 16, 2024 05:24:18 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 8s+215ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:23:18 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:23:18 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:23:29 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:23:39 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:23:53 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:23:58 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:24:11 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:24:18 PM</td>
+				<td class='step-details'>
+						Validation Succesfull
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/MenuValidation20240216052325.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/MenuValidation20240216052325.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/MenuValidation20240216052325.png'></li>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/MenuValidation20240216052334.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/MenuValidation20240216052334.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/MenuValidation20240216052334.png'></li>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/MenuValidation20240216052348.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/MenuValidation20240216052348.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/MenuValidation20240216052348.png'></li>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/MenuValidation20240216052355.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/MenuValidation20240216052355.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/MenuValidation20240216052355.png'></li>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/MenuValidation20240216052405.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/MenuValidation20240216052405.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/MenuValidation20240216052405.png'></li>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/MenuValidation20240216052415.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/MenuValidation20240216052415.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/MenuValidation20240216052415.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='14'>
+					<div class='test-heading'>
+						<span class='test-name'>Tc05-Account Creation with valid Credentials</span>
+						<span class='test-time'>Feb 16, 2024 05:24:26 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 16, 2024 05:24:26 PM</span>
+	<span class='label end-time'>Feb 16, 2024 05:24:41 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 15s+274ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:24:35 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:24:35 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:24:39 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:24:39 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:24:39 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:24:39 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:24:40 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:24:40 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:24:40 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:24:41 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:24:41 PM</td>
+				<td class='step-details'>
+						Account Creation Succesfull
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/AccountCreation20240216052441.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/AccountCreation20240216052441.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/AccountCreation20240216052441.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='15'>
+					<div class='test-heading'>
+						<span class='test-name'>Tc06-Account Creation with invalid Credentials</span>
+						<span class='test-time'>Feb 16, 2024 05:24:48 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 16, 2024 05:24:48 PM</span>
+	<span class='label end-time'>Feb 16, 2024 05:25:16 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 28s+273ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:24:57 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:24:57 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:25:13 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:25:14 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:25:14 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:25:14 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:25:15 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:25:15 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:25:15 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:25:16 PM</td>
+				<td class='step-details'>
+						Account Creation unSuccesfull
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/AccountCreation20240216052516.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/AccountCreation20240216052516.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/AccountCreation20240216052516.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='16'>
+					<div class='test-heading'>
+						<span class='test-name'>Tc13-Validating Bottom Links</span>
+						<span class='test-time'>Feb 16, 2024 05:25:20 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 16, 2024 05:25:20 PM</span>
+	<span class='label end-time'>Feb 16, 2024 05:27:00 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 40s+75ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:25:28 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:25:36 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:27:00 PM</td>
+				<td class='step-details'>
+						Bottom Links Validated
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216052532.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216052532.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216052532.png'></li>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216052540.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216052540.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216052540.png'></li>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216052549.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216052549.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216052549.png'></li>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216052557.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216052557.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216052557.png'></li>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216052606.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216052606.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216052606.png'></li>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216052614.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216052614.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216052614.png'></li>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216052622.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216052622.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216052622.png'></li>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216052629.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216052629.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216052629.png'></li>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216052641.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216052641.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216052641.png'></li>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216052655.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216052655.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/BottomLinks20240216052655.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='17'>
+					<div class='test-heading'>
+						<span class='test-name'>Tc11-Checkout & Payment Process</span>
+						<span class='test-time'>Feb 16, 2024 05:27:04 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 16, 2024 05:27:04 PM</span>
+	<span class='label end-time'>Feb 16, 2024 05:28:05 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 1s+505ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:27:12 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:27:12 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:27:12 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:27:25 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:27:26 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:27:39 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:27:42 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:27:48 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:27:59 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:28:00 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:28:01 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:28:01 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:28:03 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:28:03 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:28:05 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:28:05 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:28:05 PM</td>
+				<td class='step-details'>
+						PaymentIcon is clicked not able to automate it
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ByBrandName20240216052739.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ByBrandName20240216052739.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ByBrandName20240216052739.png'></li>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/Address Details20240216052805.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/Address Details20240216052805.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/Address Details20240216052805.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='18'>
+					<div class='test-heading'>
+						<span class='test-name'>Tc01-Sign-in with valid Credentials</span>
+						<span class='test-time'>Feb 16, 2024 05:28:09 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 16, 2024 05:28:09 PM</span>
+	<span class='label end-time'>Feb 16, 2024 05:28:23 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 14s+139ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:28:16 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:28:16 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:28:21 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:28:21 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:28:21 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:28:23 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:28:23 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:28:23 PM</td>
+				<td class='step-details'>
+						Login Succesfull
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ValidSignin20240216052823.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ValidSignin20240216052823.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ValidSignin20240216052823.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='19'>
+					<div class='test-heading'>
+						<span class='test-name'>Tc02-Sign-in with Invalid password & valid password</span>
+						<span class='test-time'>Feb 16, 2024 05:28:27 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 16, 2024 05:28:27 PM</span>
+	<span class='label end-time'>Feb 16, 2024 05:28:41 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 14s+556ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:28:33 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:28:34 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:28:39 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:28:39 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:28:39 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:28:41 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:28:41 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:28:41 PM</td>
+				<td class='step-details'>
+						Login Un-Succesfull
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ValidSignin20240216052841.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ValidSignin20240216052841.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ValidSignin20240216052841.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='20'>
+					<div class='test-heading'>
+						<span class='test-name'>Tc03-Sign-in with valid password & invalid password</span>
+						<span class='test-time'>Feb 16, 2024 05:28:43 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 16, 2024 05:28:43 PM</span>
+	<span class='label end-time'>Feb 16, 2024 05:28:59 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 15s+230ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:28:51 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:28:51 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:28:56 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:28:56 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:28:57 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:28:57 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:28:57 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:28:59 PM</td>
+				<td class='step-details'>
+						Login Un-Succesfull
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ValidSignin20240216052858.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ValidSignin20240216052858.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ValidSignin20240216052858.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='21'>
+					<div class='test-heading'>
+						<span class='test-name'>Tc04-Sign-in with invalid password & invalid password</span>
+						<span class='test-time'>Feb 16, 2024 05:29:02 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 16, 2024 05:29:02 PM</span>
+	<span class='label end-time'>Feb 16, 2024 05:29:18 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 15s+859ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:29:10 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:29:10 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:29:16 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:29:16 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:29:17 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:29:17 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:29:17 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:29:18 PM</td>
+				<td class='step-details'>
+						Login Un-Succesfull
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ValidSignin20240216052918.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ValidSignin20240216052918.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ValidSignin20240216052918.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='22'>
+					<div class='test-heading'>
+						<span class='test-name'>Tc07-Adding Cart through search Icon</span>
+						<span class='test-time'>Feb 16, 2024 05:29:21 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 16, 2024 05:29:21 PM</span>
+	<span class='label end-time'>Feb 16, 2024 05:29:51 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 29s+147ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:29:28 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:29:29 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:29:38 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:29:38 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:29:50 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:29:51 PM</td>
+				<td class='step-details'>
+						Added to cart
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/Search&AddtoCart20240216052950.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/Search&AddtoCart20240216052950.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/Search&AddtoCart20240216052950.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='23'>
+					<div class='test-heading'>
+						<span class='test-name'>Tc08-Adding Cart through Department</span>
+						<span class='test-time'>Feb 16, 2024 05:29:54 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 16, 2024 05:29:54 PM</span>
+	<span class='label end-time'>Feb 16, 2024 05:30:02 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 7s+981ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:30:02 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='24'>
+					<div class='test-heading'>
+						<span class='test-name'>Tc09-Adding Cart through Department</span>
+						<span class='test-time'>Feb 16, 2024 05:30:48 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 16, 2024 05:30:48 PM</span>
+	<span class='label end-time'>Feb 16, 2024 05:31:17 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 29s+381ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:30:57 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:30:57 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:31:06 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:31:17 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:31:17 PM</td>
+				<td class='step-details'>
+						Added to cart
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ByDepartment20240216053117.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ByDepartment20240216053117.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ByDepartment20240216053117.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='25'>
+					<div class='test-heading'>
+						<span class='test-name'>Tc15- Url Validation</span>
+						<span class='test-time'>Feb 16, 2024 05:31:21 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 16, 2024 05:31:21 PM</span>
+	<span class='label end-time'>Feb 16, 2024 05:31:29 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 8s+422ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:31:29 PM</td>
+				<td class='step-details'>
+						Validation Succesfull
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='26'>
+					<div class='test-heading'>
+						<span class='test-name'>Tc11--Adding Cart through Brand</span>
+						<span class='test-time'>Feb 16, 2024 05:31:31 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 16, 2024 05:31:31 PM</span>
+	<span class='label end-time'>Feb 16, 2024 05:32:08 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 36s+951ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:31:40 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:31:40 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:31:41 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:31:48 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:31:57 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:31:57 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:32:08 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:32:08 PM</td>
+				<td class='step-details'>
+						Added to cart
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ByBrandName20240216053208.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ByBrandName20240216053208.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ByBrandName20240216053208.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='27'>
+					<div class='test-heading'>
+						<span class='test-name'>Tc10--Adding Cart through Brand</span>
+						<span class='test-time'>Feb 16, 2024 05:32:12 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 16, 2024 05:32:12 PM</span>
+	<span class='label end-time'>Feb 16, 2024 05:32:52 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 39s+994ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:32:19 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:32:19 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:32:20 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:32:37 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:32:37 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:32:51 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:32:52 PM</td>
+				<td class='step-details'>
+						Added to cart
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ByBrandName20240216053252.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ByBrandName20240216053252.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/ByBrandName20240216053252.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='28'>
+					<div class='test-heading'>
+						<span class='test-name'>Tc14-Menu validation</span>
+						<span class='test-time'>Feb 16, 2024 05:32:55 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 16, 2024 05:32:55 PM</span>
+	<span class='label end-time'>Feb 16, 2024 05:34:24 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 28s+321ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:33:06 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:33:07 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:33:19 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:33:33 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:33:45 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:34:00 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:34:13 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:34:24 PM</td>
+				<td class='step-details'>
+						Validation Succesfull
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/MenuValidation20240216053315.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/MenuValidation20240216053315.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/MenuValidation20240216053315.png'></li>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/MenuValidation20240216053328.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/MenuValidation20240216053328.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/MenuValidation20240216053328.png'></li>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/MenuValidation20240216053340.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/MenuValidation20240216053340.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/MenuValidation20240216053340.png'></li>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/MenuValidation20240216053352.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/MenuValidation20240216053352.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/MenuValidation20240216053352.png'></li>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/MenuValidation20240216053406.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/MenuValidation20240216053406.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/MenuValidation20240216053406.png'></li>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/MenuValidation20240216053420.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/MenuValidation20240216053420.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/MenuValidation20240216053420.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='29'>
+					<div class='test-heading'>
+						<span class='test-name'>Tc05-Account Creation with valid Credentials</span>
+						<span class='test-time'>Feb 16, 2024 05:34:29 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 16, 2024 05:34:29 PM</span>
+	<span class='label end-time'>Feb 16, 2024 05:34:53 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 23s+895ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:34:36 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:34:36 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:34:50 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:34:50 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:34:50 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:34:50 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:34:51 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:34:52 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:34:52 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:34:53 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:34:53 PM</td>
+				<td class='step-details'>
+						Account Creation Succesfull
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/AccountCreation20240216053453.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/AccountCreation20240216053453.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/AccountCreation20240216053453.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='30'>
+					<div class='test-heading'>
+						<span class='test-name'>Tc06-Account Creation with invalid Credentials</span>
+						<span class='test-time'>Feb 16, 2024 05:34:56 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 16, 2024 05:34:56 PM</span>
+	<span class='label end-time'>Feb 16, 2024 05:35:14 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 18s+168ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:35:05 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:35:05 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:35:11 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:35:11 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:35:11 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:35:13 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:35:13 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:35:13 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:35:13 PM</td>
+				<td class='step-details'>
+						Text is updated
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>5:35:14 PM</td>
+				<td class='step-details'>
+						Element is Clicked
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:35:14 PM</td>
+				<td class='step-details'>
+						Account Creation unSuccesfull
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/AccountCreation20240216053514.png' src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/AccountCreation20240216053514.png' data-src='C:\Users\santh\eclipse-workspace\BestBuy/Screenshots/AccountCreation20240216053514.png'></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
+			</div>
+			<h5 class='test-name'></h5>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>30</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>0</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Feb 16, 2024 05:14:57 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Feb 16, 2024 05:35:14 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 20m 17s+10ms</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+                parentCount: 30,
+				passParent: 30,
+				failParent: 0,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 0,
+				childCount: 0,
+				passChild: 0,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				debugChild: 0,
+				exceptionsChild: 0,
+				grandChildCount: 0,
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				debugGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		<script>
+			var timeline = {
+			        "Tc13-Validating Bottom Links":86.178,"Tc11-Checkout & Payment Process":63.988,"Tc01-Sign-in with valid Credentials":13.272,"Tc02-Sign-in with Invalid password & valid password":15.816,"Tc03-Sign-in with valid password & invalid password":14.782,"Tc04-Sign-in with invalid password & invalid password":10.891,"Tc07-Adding Cart through search Icon":29.455,"Tc08-Adding Cart through Department":29.022,"Tc09-Adding Cart through Department":8.305,"Tc15- Url Validation":9.831,"Tc11--Adding Cart through Brand":33.077,"Tc10--Adding Cart through Brand":40.898,"Tc14-Menu validation":68.215,"Tc05-Account Creation with valid Credentials":15.274,"Tc06-Account Creation with invalid Credentials":28.273,"Tc13-Validating Bottom Links":100.075,"Tc11-Checkout & Payment Process":61.505,"Tc01-Sign-in with valid Credentials":14.139,"Tc02-Sign-in with Invalid password & valid password":14.556,"Tc03-Sign-in with valid password & invalid password":15.23,"Tc04-Sign-in with invalid password & invalid password":15.859,"Tc07-Adding Cart through search Icon":29.147,"Tc08-Adding Cart through Department":7.981,"Tc09-Adding Cart through Department":29.381,"Tc15- Url Validation":8.422,"Tc11--Adding Cart through Brand":36.951,"Tc10--Adding Cart through Brand":39.994,"Tc14-Menu validation":88.321,"Tc05-Account Creation with valid Credentials":23.895,"Tc06-Account Creation with invalid Credentials":18.168
+			};
+		</script>
+		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>
+		<script type='text/javascript'>
+		</script>
+	</body>
+</html>
